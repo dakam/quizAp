@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/analyticsFragment"
         android:name="com.dakam.dakamquizapp.ui.AnalyticsFragment"
-        android:label="fragment_analytics"
+        android:label="Analytics"
         tools:layout="@layout/fragment_analytics" >
         <action
             android:id="@+id/action_analyticsFragment_to_homeFragment"
@@ -26,7 +26,7 @@
     <fragment
         android:id="@+id/questionFragment"
         android:name="com.dakam.dakamquizapp.ui.QuestionFragment"
-        android:label="fragment_question"
+        android:label="Questions"
         tools:layout="@layout/fragment_question" >
         <action
             android:id="@+id/action_questionFragment_to_homeFragment"
@@ -38,7 +38,7 @@
     <fragment
         android:id="@+id/endFragment"
         android:name="com.dakam.dakamquizapp.ui.EndFragment"
-        android:label="fragment_end"
+        android:label="Results"
         tools:layout="@layout/fragment_end" >
         <action
             android:id="@+id/action_endFragment_to_homeFragment"

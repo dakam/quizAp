@@ -58,7 +58,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Codeplayon Learn share and Explore "
+                android:text="MIU Quiz App "
                 android:layout_gravity="bottom"
                 android:gravity="center"
                 android:textColor="@color/white"
