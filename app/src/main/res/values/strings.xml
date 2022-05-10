@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DakamQuizApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="startText">Welcome To The quiz app, you have 15 questions to be answer but you can skip along the
+way</string>
+</resources>
