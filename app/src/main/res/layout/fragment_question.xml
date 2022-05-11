@@ -17,8 +17,32 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:textSize="20sp"
-        android:gravity="center_horizontal"
+        android:gravity="left"
         android:id="@+id/qtn"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:id="@+id/radioG"
+            android:layout_height="200dp" >
+            <RadioButton
+                android:id="@+id/radiobtn1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp" />
+            <RadioButton
+                android:id="@+id/radiobtn2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp" />
+            <RadioButton
+                android:id="@+id/radiobtn3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="17sp" />
+        </RadioGroup>
+
+
     </LinearLayout>
 
     <LinearLayout

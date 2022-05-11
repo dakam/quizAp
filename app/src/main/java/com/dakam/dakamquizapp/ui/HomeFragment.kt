@@ -45,16 +45,16 @@ class HomeFragment  :BaseFragment() {
                         QuizDatabase(it).getQuestionDao().addQuestion(qn2)
                         QuizDatabase(it).getQuestionDao().addQuestion(qn3)
 
-                        val a1q1 = Answer(0,1,"No SQL Database")
-                        val a2q1 = Answer(0,1,"Linux Database")
-                        val a3q1 = Answer(0,1,"SQL Based Database")
-                        val a1q2 = Answer(0,2,"C ++")
-                        val a2q2 = Answer(0,2,"Java")
-                        val a3q2 = Answer(0,2,"Visual Basic")
+                        val a1q1 = Answer(0,1,"No SQL Database",false)
+                        val a2q1 = Answer(0,1,"Linux Database",false)
+                        val a3q1 = Answer(0,1,"SQL Based Database",true)
+                        val a1q2 = Answer(0,2,"C ++",false)
+                        val a2q2 = Answer(0,2,"Java",true)
+                        val a3q2 = Answer(0,2,"Visual Basic",false)
 
-                        val a1q3 = Answer(0,3,"Databases For Android")
-                        val a2q3 = Answer(0,3,"Android Activities")
-                        val a3q3 = Answer(0,3,"Layouts for Android")
+                        val a1q3 = Answer(0,3,"Databases For Android",false)
+                        val a2q3 = Answer(0,3,"Android Activities",false)
+                        val a3q3 = Answer(0,3,"Layouts for Android",true)
 
                         QuizDatabase(it).getAnswerDao().addMultipleAnswer(a1q1,a2q1,a3q1,a1q2,a2q2,a3q2,a1q3,a2q3,a3q3)
 

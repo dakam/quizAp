@@ -9,5 +9,6 @@ data class Answer (
     @PrimaryKey(autoGenerate = true)
     val id:Int,
     val questionId: Int,
-    @ColumnInfo(name = "ans") val ans :String
+    @ColumnInfo(name = "ans") val ans :String,
+    val correct: Boolean
 )
