@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
-private val SPLASH_TIME_OUT = 3000
+private val SPLASH_TIME_OUT = 2
 private val TAG = "Quiz App Start"
 var progressBar: ProgressBar? = null
 
