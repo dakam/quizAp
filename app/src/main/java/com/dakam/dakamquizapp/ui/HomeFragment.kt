@@ -58,12 +58,6 @@ class HomeFragment  :BaseFragment() {
 
                         QuizDatabase(it).getAnswerDao().addMultipleAnswer(a1q1,a2q1,a3q1,a1q2,a2q2,a3q2,a1q3,a2q3,a3q3)
 
-
-
-
-
-
-
                     }
                 }
 
