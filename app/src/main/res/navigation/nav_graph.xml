@@ -46,5 +46,8 @@
         <action
             android:id="@+id/action_endFragment_to_analyticsFragment"
             app:destination="@id/analyticsFragment" />
+        <action
+            android:id="@+id/action_endFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
     </fragment>
 </navigation>

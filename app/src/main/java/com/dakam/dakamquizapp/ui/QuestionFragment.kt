@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.activity.OnBackPressedCallback
+import androidx.lifecycle.ViewTreeLifecycleOwner
 import androidx.navigation.Navigation
 import com.dakam.dakamquizapp.R
 import com.dakam.dakamquizapp.model.UserResult
@@ -85,8 +87,16 @@ class QuestionFragment : BaseFragment() {
 
     }
 
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner,object : OnBackPressedCallback(true){
+            override fun handleOnBackPressed() {
+
+            }
+
+        })
 
         btn_next?.setOnClickListener {
 

@@ -81,7 +81,7 @@ class EndFragment :BaseFragment() {
 
         btn_tryagain.setOnClickListener {
 
-            val action = EndFragmentDirections.actionEndFragmentToHomeFragment()
+            val action = EndFragmentDirections.actionEndFragmentToQuestionFragment()
             Navigation.findNavController(it).navigate(action)
         }
 
