@@ -44,10 +44,10 @@ class EndFragment :BaseFragment() {
         var res = spf!!.getString("data", "")
         var list = gson.fromJson(res.toString(), Array<UserResult>::class.java).asList()
 
-        var score=0;
-        var correct =0;
-        var wrong=0;
-        var total =0;
+        var score:Int=0;
+        var correct:Int =0;
+        var wrong:Int=0;
+        var total:Int =0;
         if(list !=null){
             for(result in list){
 
@@ -65,7 +65,8 @@ class EndFragment :BaseFragment() {
         correctCountTV.text = "Correct Answers (Score) : "+score
         wrongCountTV.text = "Wrong Answers : "+ wrong
         scoreTV.text = "Your Score is "+ score+ " / "+total;
-        if(score/total >=0.6){
+
+        if(score >  9){
             imgImage.setBackgroundResource(R.drawable.welldone)
         }else{
             imgImage.setBackgroundResource(R.drawable.tryagain)

@@ -35,16 +35,10 @@ class AnalyticsFragment :BaseFragment() {
         toHome = root.findViewById<Button>(R.id.btn_analysis_to_home)
         toQuestion = root.findViewById<Button>(R.id.btn_analysis_to_question)
 
-
-       // if(list !=null){
-
-        val toast= Toast.makeText(context, list.toString(), Toast.LENGTH_LONG)
-        toast.show()
-
         val data: Array<UserResult> = list.toTypedArray()
             val myAdapter = AnalyticsAdapter(requireActivity(), data)
             listView.adapter = myAdapter
-       // }
+
 
 
         return root

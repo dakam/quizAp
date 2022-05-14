@@ -22,7 +22,8 @@ class AnalyticsAdapter (private val context: FragmentActivity, private val data:
         val yourAnswerText = rowView.findViewById(R.id.youranswer) as TextView
         val CorrectAnswerText = rowView.findViewById(R.id.correctanswer) as TextView
 
-        questionText.text = "#"+ position+1 +". "+data[position].question
+        var num:Int =position+1
+        questionText.text = "#"+ num +". "+data[position].question
         if(data[position].correct==true){
             imageView.setBackgroundResource(R.drawable.correct)
         }else {
