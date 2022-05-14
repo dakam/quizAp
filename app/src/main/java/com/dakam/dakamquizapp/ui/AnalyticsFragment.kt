@@ -17,6 +17,8 @@ import com.google.gson.Gson
 class AnalyticsFragment :BaseFragment() {
 
 
+    private lateinit var toHome:Button
+    private lateinit var toQuestion:Button
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -30,13 +32,17 @@ class AnalyticsFragment :BaseFragment() {
         var list = gson.fromJson(res.toString(), Array<UserResult>::class.java).asList()
 
         var listView = root.findViewById<ListView>(R.id.listView)
+        toHome = root.findViewById<Button>(R.id.btn_analysis_to_home)
+        toQuestion = root.findViewById<Button>(R.id.btn_analysis_to_question)
 
 
        // if(list !=null){
 
         val toast= Toast.makeText(context, list.toString(), Toast.LENGTH_LONG)
         toast.show()
-            val myAdapter = AnalyticsAdapter(requireActivity(), list)
+
+        val data: Array<UserResult> = list.toTypedArray()
+            val myAdapter = AnalyticsAdapter(requireActivity(), data)
             listView.adapter = myAdapter
        // }
 
@@ -46,6 +52,17 @@ class AnalyticsFragment :BaseFragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        toHome.setOnClickListener {
+
+            val action = AnalyticsFragmentDirections.actionAnalyticsFragmentToHomeFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
+        toQuestion.setOnClickListener {
+
+            val action = AnalyticsFragmentDirections.actionAnalyticsFragmentToQuestionFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
 
 
     }

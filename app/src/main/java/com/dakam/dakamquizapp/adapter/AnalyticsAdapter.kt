@@ -10,8 +10,8 @@ import androidx.fragment.app.FragmentActivity
 import com.dakam.dakamquizapp.R
 import com.dakam.dakamquizapp.model.UserResult
 
-class AnalyticsAdapter (private val context: FragmentActivity, private val data: List<UserResult>)
-    : ArrayAdapter<String>(context, R.layout.custom_analytics) {
+class AnalyticsAdapter (private val context: FragmentActivity, private val data: Array<UserResult>)
+    : ArrayAdapter<UserResult>(context, R.layout.custom_analytics, data) {
 
     override fun getView(position: Int, view: View?, parent: ViewGroup): View {
         val inflater = context.layoutInflater
@@ -22,15 +22,15 @@ class AnalyticsAdapter (private val context: FragmentActivity, private val data:
         val yourAnswerText = rowView.findViewById(R.id.youranswer) as TextView
         val CorrectAnswerText = rowView.findViewById(R.id.correctanswer) as TextView
 
-        questionText.text = data.get(position).question
-        if(data.get(position).correct==true){
+        questionText.text = "#"+ position+1 +". "+data[position].question
+        if(data[position].correct==true){
             imageView.setBackgroundResource(R.drawable.correct)
         }else {
             imageView.setBackgroundResource(R.drawable.wrong)
 
         }
-        yourAnswerText.text =  data.get(position).yourAnswer
-        CorrectAnswerText.text =  data.get(position).correctAnswer
+        yourAnswerText.text = "Your Answer: "+ data[position].yourAnswer
+        CorrectAnswerText.text = "Correct Answer: "+ data[position].correctAnswer
 
         return rowView
     }
